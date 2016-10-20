@@ -1,11 +1,11 @@
 SPK_NAME = sabnzbd-testing
-SPK_VERS = 0.8.0Beta1
-SPK_REV = 2
+SPK_VERS = 1.1.1RC2
+SPK_REV = 9
 SPK_ICON = src/sabnzbd-testing.png
 DSM_UI_DIR = app
 BETA = 1
 
-DEPENDS  = cross/busybox cross/par2cmdline cross/unrar cross/$(SPK_NAME)
+DEPENDS = cross/busybox cross/par2cmdline cross/unrar cross/unzip cross/$(SPK_NAME)
 SPK_DEPENDS = "python>=2.7.6-8"
 
 MAINTAINER = SynoCommunity
@@ -15,7 +15,7 @@ DESCRIPTION_SPN = SABnzbd hace que Usenet sea lo más simple posible, automatiza
 ADMIN_PORT = 8089
 RELOAD_UI = yes
 DISPLAY_NAME = SABnzbd Testing
-CHANGELOG = "Update to 0.8.0 Beta 1"
+CHANGELOG = "Updated to 1.1.1 RC2"
 
 HOMEPAGE   = http://sabnzbd.org
 LICENSE    = GPL
