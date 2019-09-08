@@ -1,5 +1,5 @@
 PKG_NAME = libvpx
-PKG_VERS = 1.6.0
+PKG_VERS = 1.6.1
 PKG_EXT = tar.gz
 PKG_DIST_NAME = v$(PKG_VERS).$(PKG_EXT)
 PKG_DIST_SITE = https://github.com/webmproject/libvpx/archive
@@ -28,6 +28,10 @@ endif
 
 ifeq ($(findstring $(ARCH),$(ARM7_ARCHES)),$(ARCH))
 CONFIGURE_ARGS += --target=armv7-linux-gcc
+endif
+
+ifeq ($(findstring $(ARCH),$(ARM8_ARCHES)),$(ARCH))
+CONFIGURE_ARGS += --target=armv8-linux-gcc
 endif
 
 ifeq ($(findstring $(ARCH),$(x86_ARCHES)),$(ARCH))
